@@ -10,14 +10,14 @@ namespace Person_Management.Database.Repository
     {
         private static List<Person> Persons { get; set; } = new List<Person>();
 
-        public static Person AddNewPerson(string name, string lastname, string fathername, string fin, string email)
+        public static Person Add(string name, string lastname, string fathername, string fin, string email)
         {
             Person person = new Person(name, lastname, fathername, fin, email);
             Persons.Add(person);
             return person;
         }
 
-        public void RemovePerson(string fin)
+        public void Remove(string fin)
         {
             for (int i = 0; i < Persons.Count; i++)
             {
@@ -27,7 +27,7 @@ namespace Person_Management.Database.Repository
                 }
             }
         }
-        public void UpdatePerson(int id, string name, string lastname, string fathername, string fin, string email)
+        public void Update(int id, string name, string lastname, string fathername, string fin, string email)
         {
             for (int i = 0; i < Persons.Count; i++)
             {
