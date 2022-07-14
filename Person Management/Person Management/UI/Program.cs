@@ -1,4 +1,5 @@
-﻿using Person_Management.Database.Repository;
+﻿using Person_Management.ApplicationLogic.Validations;
+using Person_Management.Database.Repository;
 using System;
 
 namespace Person_Management
@@ -36,7 +37,14 @@ namespace Person_Management
                     Console.Write("Please add person's email code :");
                     string email = Console.ReadLine();
 
+                    if (UserValidations.IsValidations(email,fin))
+                    {
                     Person person = UserRepository.Add(name, lastName, fathername, fin, email);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error");
+                    }
 
                 }
                 else if (command == "/remove-person-by-id")
