@@ -43,6 +43,11 @@ namespace Person_Management.Database.Repository
             }
         }
 
+        public List<Person> GetAll()
+        {
+            return Persons;
+        }
+
         public bool IsMailUnique(string email)
         {
             foreach (Person person in Persons)

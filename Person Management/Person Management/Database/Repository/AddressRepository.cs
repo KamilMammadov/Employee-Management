@@ -13,7 +13,7 @@ namespace Person_Management.Database.Repository
         private static List<Address> adresses { get; set; } = new List<Address>();
 
 
-        public static Address AddNewAddress(string name)
+        public static Address Add(string name)
         {
             Address address = new Address(name);
             adresses.Add(address);
