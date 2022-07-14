@@ -20,11 +20,11 @@ namespace Person_Management.Database.Repository
             return address;
         }
 
-        public void RemoveAddress(string name)
+        public void RemoveAddress(int id)
         {
             for (int i = 0; i < adresses.Count; i++)
             {
-                if (adresses[i].Name==name)
+                if (adresses[i].Id==id)
                 {
                     adresses.Remove(adresses[i]);
                 }
