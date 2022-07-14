@@ -27,5 +27,10 @@ namespace Person_Management.Database.Repository
 
             _idCounter++;
         }
+
+        public static string GetInfo()
+        {
+            return Name + LastName + FatherName;
+        }
     }
 }

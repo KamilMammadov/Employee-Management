@@ -17,7 +17,7 @@ namespace Person_Management.Database.Repository
             return person;
         }
 
-        public void Remove(string fin)
+        public static void Remove(string fin)
         {
             for (int i = 0; i < Persons.Count; i++)
             {
@@ -27,7 +27,7 @@ namespace Person_Management.Database.Repository
                 }
             }
         }
-        public void Update(int id, string name, string lastname, string fathername, string fin, string email)
+        public static void Update(int id, string name, string lastname, string fathername, string fin, string email)
         {
             for (int i = 0; i < Persons.Count; i++)
             {
@@ -43,12 +43,12 @@ namespace Person_Management.Database.Repository
             }
         }
 
-        public List<Person> GetAll()
+        public static List<Person> GetAll()
         {
             return Persons;
         }
 
-        public bool IsMailUnique(string email)
+        public static bool IsMailUnique(string email)
         {
             foreach (Person person in Persons)
             {
