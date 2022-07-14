@@ -8,7 +8,7 @@ namespace Person_Management.Database.Repository
 {
     class UserRepository
     {
-        public static List<Person> Persons { get; set; } = new List<Person>();
+        private static List<Person> Persons { get; set; } = new List<Person>();
 
         public static Person AddNewPerson(string name, string lastname, string fathername, string fin, string email)
         {
@@ -27,7 +27,20 @@ namespace Person_Management.Database.Repository
                 }
             }
         }
+        public void UpdatePerson(int id, string name, string lastname, string fathername, string fin, string email)
+        {
+            for (int i = 0; i < Persons.Count; i++)
+            {
+                if (Persons[i].Id == id)
+                {
+                    Persons[i].Name = name;
+                    Persons[i].LastName = lastname;
+                    Persons[i].FatherName = fathername;
+                    Persons[i].Fin = fin;
+                    Persons[i].Email = email;
 
-
+                }
+            }
+        }
     }
 }
