@@ -42,5 +42,19 @@ namespace Person_Management.Database.Repository
                 }
             }
         }
+
+        public bool IsMailUnique(string email)
+        {
+            foreach (Person person in Persons)
+            {
+                if (person.Email==email)
+                {
+                    return true;
+                }
+
+            }
+            return false;
+
+        }
     }
 }
