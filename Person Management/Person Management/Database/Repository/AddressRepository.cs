@@ -10,7 +10,7 @@ namespace Person_Management.Database.Repository
 
     class AddressRepository
     {
-        public static List<Address> adresses { get; set; } = new List<Address>();
+        private static List<Address> adresses { get; set; } = new List<Address>();
 
 
         public static Address AddNewAddress(string name)
@@ -20,7 +20,7 @@ namespace Person_Management.Database.Repository
             return address;
         }
 
-        public void RemoveAddress(int id)
+        public void Remove(int id)
         {
             for (int i = 0; i < adresses.Count; i++)
             {
@@ -31,7 +31,7 @@ namespace Person_Management.Database.Repository
             }
         }
 
-        public void UpdateAdress(int id,string name)
+        public void Update(int id,string name)
         { 
             for (int i = 0; i < adresses.Count; i++)
             {
