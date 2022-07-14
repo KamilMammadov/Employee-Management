@@ -30,5 +30,16 @@ namespace Person_Management.Database.Repository
                 }
             }
         }
+
+        public void UpdateAdress(int id,string name)
+        { 
+            for (int i = 0; i < adresses.Count; i++)
+            {
+                if (adresses[i].Id==id)
+                {
+                    adresses[i].Name = name;
+                }
+            }
+        }
     }
 }
