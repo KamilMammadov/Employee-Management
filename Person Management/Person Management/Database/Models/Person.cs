@@ -13,10 +13,10 @@ namespace Person_Management.Database.Repository
         public string Name { get; set; }
         public string LastName { get; set; }
         public string FatherName { get; set; }
-        public int Fin { get; set; }
+        public string Fin { get; set; }
         public string Email { get; set; }  
 
-        public Person(string name, string lastName, string fatherName, int fin, string email)
+        public Person(string name, string lastName, string fatherName, string fin, string email)
         {
             Id = _idCounter;
             Name = name;
